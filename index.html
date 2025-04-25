@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diabetes Risk Predictor</title>
+  <title>Early Stage Diabetes Risk Predictor</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -110,8 +110,8 @@
 </head>
 <body>
   <div class="container" role="main">
-    <h1>Early Diabetes Risk Predictor</h1>
-    <h3>Created by Abdur Rahman Muhammad - 2025</h3>
+    <h1>Early Stage Diabetes Risk Predictor</h1>
+    <h3>by Abdur Rahman Muhammad - 2025</h3>
     
     <div id="questionForm">
       <div class="question active" id="question1">
@@ -367,7 +367,7 @@
               <li>Manage stress and anxiety</li>
             </ul>`;
         } 
-	  else if (0.25 < probDiabetes <= 0.5) {
+	  else if (probDiabetes > 0.25 && probDiabetes <= 0.5) {
           resultDiv.innerHTML += `Recommendations for low risk:
             <ul>
               <li>Adopt a balanced whole food diet, avoid processed foods</li>
@@ -377,7 +377,7 @@
               <li>Manage stress and anxiety</li>
             </ul>`;
         }
-	  else if (0.5 < probDiabetes <= 0.75) {
+	  else if (probDiabetes > 0.5 && probDiabetes <= 0.75) {
           resultDiv.innerHTML += `Recommendations for moderate risk:
             <ul>
               <li>Consult with a healthcare professional</li>
